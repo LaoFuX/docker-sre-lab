@@ -23,8 +23,8 @@ jobs:
         working-directory: app
         run: pip install -r requirements.txt
 
-      - name: Run tests
-        run: pytest tests
+      - name: Run pytests tests
+        run: python -m pytest tests
 
       - name: Build Docker image
         run: docker build -t docker-sre-lab-web:ci .
